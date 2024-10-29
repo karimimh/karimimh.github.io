@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Lato", "Roboto", sans-serif;
+}
+
+.label-list {
+  @apply list-disc list-inside [&>li]:list-none py-2 text-sm flex flex-wrap gap-2 [&>li]:bg-slate-100 [&>li]:p-1 [&>li]:px-2;
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  .resume-container {
+    box-shadow: none;
+    width: 210mm;
+    height: 297mm;
+    padding: 10mm;
+  }
+}
