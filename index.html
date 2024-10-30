@@ -17,21 +17,42 @@
     />
   </head>
   <body
-    class="bg-slate-200 font-['Lato','Roboto',sans-serif] print:bg-transparent p-4 print:p-0"
+    class="bg-white sm:bg-slate-200 font-['Lato','Roboto',sans-serif] print:bg-transparent p-4 print:p-0"
   >
     <div
-      class="bg-white flex flex-col items-center w-[210mm] h-[297mm] p-[10mm] m-auto shadow-lg print:shadow-none"
+      class="bg-white flex flex-col items-center w-full sm:w-[210mm] sm:h-[297mm] sm:p-[10mm] sm:m-auto sm:shadow-lg print:shadow-none"
     >
       <header class="border-b flex flex-col items-start gap-1 w-full pb-2">
         <h1 class="font-extrabold text-2xl">Mohammad Hossein Karimi</h1>
         <h2 class="font-bold text-lg">Frontend Developer</h2>
-        <address class="not-italic flex items-center w-full gap-6 text-sm">
+        <address
+          class="not-italic flex flex-col sm:flex-row items-start sm:items-center w-full gap-2 sm:gap-6 text-sm"
+        >
           <a
             class="hover:underline flex-1"
             href="https://www.google.com/maps/place/Tehran,+Iran"
             target="_blank"
             rel="noopener noreferrer"
-            >Tehran, Iran</a
+            ><div class="flex items-center justify-start gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-map-pin"
+              >
+                <path
+                  d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Tehran, Iran
+            </div></a
           >
           <a class="hover:underline" href="mailto:mhkarimiwork@gmail.com"
             ><div class="flex items-center justify-between gap-2">
@@ -74,13 +95,17 @@
           >
         </address>
       </header>
-      <div class="flex">
-        <main class="flex-[2] pt-2">
+      <div class="flex flex-col sm:flex-row">
+        <main class="sm:flex-[2] pt-2">
           <section class="border-b mb-2 pr-2 pb-2">
             <h3 class="font-bold text-lg">Work Experience</h3>
             <article class="py-2">
-              <h4 class="text-base font-semibold">Frontend Developer</h4>
-              <div class="flex items-center justify-between gap-6 text-base">
+              <h4 class="text-sm sm:text-base font-semibold">
+                Frontend Developer
+              </h4>
+              <div
+                class="flex flex-row items-center justify-between gap-0 sm:gap-6 text-base"
+              >
                 <div class="flex items-center">
                   <svg
                     width="32"
@@ -115,7 +140,9 @@
                       />
                     </g>
                   </svg>
-                  <h5 class="text-blue-500">Motamed Melal Sharif</h5>
+                  <h5 class="text-blue-500 text-sm sm:text-base">
+                    Motamed Melal Sharif
+                  </h5>
                 </div>
                 <div class="flex items-center gap-2 text-gray-500">
                   <svg
@@ -128,7 +155,7 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-calendar-days"
+                    class="lucide lucide-calendar-days hidden sm:block"
                   >
                     <path d="M8 2v4" />
                     <path d="M16 2v4" />
@@ -141,7 +168,7 @@
                     <path d="M12 18h.01" />
                     <path d="M16 18h.01" />
                   </svg>
-                  <p class="text-sm">10/2023 - Present</p>
+                  <p class="text-xs sm:text-sm">10/2023 - Present</p>
                 </div>
               </div>
               <p class="text-sm text-justify">
@@ -155,9 +182,11 @@
               </p>
             </article>
             <article class="py-2">
-              <h4 class="text-base font-semibold">Full Stack Developer</h4>
+              <h4 class="text-sm sm:text-base font-semibold">
+                Full Stack Developer
+              </h4>
               <div
-                class="flex items-center justify-between gap-6 text-base mb-2"
+                class="flex flex-row items-center justify-between gap-0 sm:gap-6 text-base mb-2"
               >
                 <div class="flex items-center gap-1">
                   <img
@@ -166,7 +195,7 @@
                     width="24"
                     height="24"
                   />
-                  <h5 class="text-blue-500">
+                  <h5 class="text-blue-500 text-sm sm:text-base">
                     Intelligent Information Solutions
                   </h5>
                 </div>
@@ -181,7 +210,7 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-calendar-days"
+                    class="lucide lucide-calendar-days hidden sm:block"
                   >
                     <path d="M8 2v4" />
                     <path d="M16 2v4" />
@@ -194,7 +223,7 @@
                     <path d="M12 18h.01" />
                     <path d="M16 18h.01" />
                   </svg>
-                  <p class="text-sm">01/2023 - 10/2023</p>
+                  <p class="text-[0.8rem] sm:text-sm">01/2023 - 10/2023</p>
                 </div>
               </div>
               <p class="text-sm text-justify">
@@ -210,12 +239,14 @@
             <h3 class="font-bold text-lg">Education</h3>
             <article class="py-2">
               <div class="flex justify-between items-center">
-                <h4 class="text-base font-semibold">
+                <h4 class="text-sm sm:text-base font-semibold">
                   PhD in Computer Engineering
                 </h4>
-                <div>Artificial Intelligence</div>
+                <div class="text-xs sm:text-base">Artificial Intelligence</div>
               </div>
-              <div class="flex items-center justify-between gap-6 text-base">
+              <div
+                class="flex flex-row items-center justify-between gap-0 sm:gap-6 text-base"
+              >
                 <div class="flex items-center gap-2 pl-1">
                   <img
                     src="./assets/SUT-colored.png"
@@ -223,7 +254,9 @@
                     width="24"
                     height="24"
                   />
-                  <h5 class="text-blue-500">Sharif University of Technology</h5>
+                  <h5 class="text-blue-500 text-sm sm:text-base">
+                    Sharif University of Technology
+                  </h5>
                 </div>
                 <div class="flex items-center gap-2 text-gray-500">
                   <svg
@@ -236,7 +269,7 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-calendar-days"
+                    class="lucide lucide-calendar-days hidden sm:block"
                   >
                     <path d="M8 2v4" />
                     <path d="M16 2v4" />
@@ -249,18 +282,20 @@
                     <path d="M12 18h.01" />
                     <path d="M16 18h.01" />
                   </svg>
-                  <p class="text-sm">2023 - Present</p>
+                  <p class="text-[0.8rem] sm:text-sm">2023 - Present</p>
                 </div>
               </div>
             </article>
             <article class="py-2">
               <div class="flex justify-between items-center">
-                <h4 class="text-base font-semibold">
+                <h4 class="text-sm sm:text-base font-semibold">
                   M.S. in Electrical Engineering
                 </h4>
-                <div>Cryptography & Security</div>
+                <div class="text-xs sm:text-base">Cryptography & Security</div>
               </div>
-              <div class="flex items-center justify-between gap-6 text-base">
+              <div
+                class="flex flex-row items-center justify-between gap-0 sm:gap-6 text-base"
+              >
                 <div class="flex items-center gap-2 pl-1">
                   <img
                     src="./assets/SUT-colored.png"
@@ -268,7 +303,9 @@
                     width="24"
                     height="24"
                   />
-                  <h5 class="text-blue-500">Sharif University of Technology</h5>
+                  <h5 class="text-blue-500 text-sm sm:text-base">
+                    Sharif University of Technology
+                  </h5>
                 </div>
                 <div class="flex items-center gap-2 text-gray-500">
                   <svg
@@ -281,7 +318,7 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-calendar-days"
+                    class="lucide lucide-calendar-days hidden sm:block"
                   >
                     <path d="M8 2v4" />
                     <path d="M16 2v4" />
@@ -294,18 +331,22 @@
                     <path d="M12 18h.01" />
                     <path d="M16 18h.01" />
                   </svg>
-                  <p class="text-sm">2020 - 2022</p>
+                  <p class="text-[0.8rem] sm:text-sm">2020 - 2022</p>
                 </div>
               </div>
             </article>
             <article class="py-2">
               <div class="flex justify-between items-center">
-                <h4 class="text-base font-semibold">
+                <h4 class="text-sm sm:text-base font-semibold">
                   B.S. in Electrical Engineering
                 </h4>
-                <div>Electronics & Communications</div>
+                <div class="text-xs sm:text-base">
+                  Electronics & Communications
+                </div>
               </div>
-              <div class="flex items-center justify-between gap-6 text-base">
+              <div
+                class="flex flex-row items-center justify-between gap-0 sm:gap-6 text-base"
+              >
                 <div class="flex items-center gap-2 pl-1">
                   <img
                     src="./assets/SUT-colored.png"
@@ -313,7 +354,9 @@
                     width="24"
                     height="24"
                   />
-                  <h5 class="text-blue-500">Sharif University of Technology</h5>
+                  <h5 class="text-blue-500 text-sm sm:text-base">
+                    Sharif University of Technology
+                  </h5>
                 </div>
                 <div class="flex items-center gap-2 text-gray-500">
                   <svg
@@ -326,7 +369,7 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-calendar-days"
+                    class="lucide lucide-calendar-days hidden sm:block"
                   >
                     <path d="M8 2v4" />
                     <path d="M16 2v4" />
@@ -339,16 +382,16 @@
                     <path d="M12 18h.01" />
                     <path d="M16 18h.01" />
                   </svg>
-                  <p class="text-sm">2011 - 2016</p>
+                  <p class="text-[0.8rem] sm:text-sm">2011 - 2016</p>
                 </div>
               </div>
             </article>
           </section>
-          <section class="pr-2 pb-2">
+          <section class="pr-2 pb-2 border-b sm:border-none">
             <h3 class="font-bold text-lg">Projects</h3>
             <article class="py-2">
               <div class="flex items-center justify-between">
-                <h4 class="text-base font-semibold">
+                <h4 class="text-sm sm:text-base font-semibold">
                   Image Editing and Painting
                 </h4>
                 <div class="flex items-center gap-2 text-gray-500">
@@ -362,7 +405,7 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-calendar-days"
+                    class="lucide lucide-calendar-days hidden sm:block"
                   >
                     <path d="M8 2v4" />
                     <path d="M16 2v4" />
@@ -375,7 +418,7 @@
                     <path d="M12 18h.01" />
                     <path d="M16 18h.01" />
                   </svg>
-                  <p class="text-sm">2024</p>
+                  <p class="text-[0.8rem] sm:text-sm">2024</p>
                 </div>
               </div>
               <p class="text-xs text-justify mt-1">
@@ -389,7 +432,9 @@
             </article>
             <article class="py-2">
               <div class="flex items-center justify-between">
-                <h4 class="text-base font-semibold">Dall-E Sharing</h4>
+                <h4 class="text-sm sm:text-base font-semibold">
+                  Dall-E Sharing
+                </h4>
                 <div class="flex items-center gap-2 text-gray-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -401,7 +446,7 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-calendar-days"
+                    class="lucide lucide-calendar-days hidden sm:block"
                   >
                     <path d="M8 2v4" />
                     <path d="M16 2v4" />
@@ -414,7 +459,7 @@
                     <path d="M12 18h.01" />
                     <path d="M16 18h.01" />
                   </svg>
-                  <p class="text-sm">2023</p>
+                  <p class="text-[0.8rem] sm:text-sm">2023</p>
                 </div>
               </div>
               <p class="text-xs text-justify mt-1">
@@ -426,7 +471,9 @@
             </article>
             <article class="py-2">
               <div class="flex items-center justify-between">
-                <h4 class="text-base font-semibold">3D Shirt Generator</h4>
+                <h4 class="text-sm sm:text-base font-semibold">
+                  3D Shirt Generator
+                </h4>
                 <div class="flex items-center gap-2 text-gray-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -438,7 +485,7 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-calendar-days"
+                    class="lucide lucide-calendar-days hidden sm:block"
                   >
                     <path d="M8 2v4" />
                     <path d="M16 2v4" />
@@ -451,7 +498,7 @@
                     <path d="M12 18h.01" />
                     <path d="M16 18h.01" />
                   </svg>
-                  <p class="text-sm">2023</p>
+                  <p class="text-[0.8rem] sm:text-sm">2023</p>
                 </div>
               </div>
               <p class="text-xs text-justify mt-1">
@@ -461,8 +508,8 @@
             </article>
           </section>
         </main>
-        <aside class="flex-1 border-l pt-2">
-          <section class="border-b p-2">
+        <aside class="sm:flex-1 sm:border-l pt-2">
+          <section class="border-b sm:pl-2">
             <h3 class="font-bold text-lg">Skills</h3>
             <h4 class="text-base font-semibold pt-2">Frontend Development</h4>
             <ul class="label-list">
@@ -502,14 +549,16 @@
               <li>Pytorch</li>
             </ul>
           </section>
-          <section class="p-2">
+          <section class="sm:pl-2 py-2">
             <h3 class="font-bold text-xl mb-2">Languages</h3>
             <ul class="label-list">
               <li><strong>Persian</strong> (Native)</li>
               <li><strong>English</strong> (Fluent)</li>
             </ul>
           </section>
-          <section class="w-56 m-2 mt-32 bg-slate-50 rounded p-2">
+          <section
+            class="w-full sm:w-56 sm:m-2 mt-8 sm:mt-32 bg-slate-50 rounded p-2"
+          >
             <div class="flex items-end justify-between gap-2">
               <a class="hover:underline" href="tel:+989197342241"
                 ><svg
